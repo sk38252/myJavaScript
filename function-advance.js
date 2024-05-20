@@ -445,6 +445,7 @@
 // console.log(maping);
 
 //--------find method -
+// it will return first matched element/object/key/value
 
 // const names = ["Aditya", "Aishwarya", "Anjali"];
 
@@ -477,24 +478,26 @@
 // console.log(nameSome);
 
 // --------------.every method :
-// if every elements is stating from given method then return true
+// if every condition is true than return true otherwise false.
 
-const humans = ["Billu Bhayankar", "Bishal Dadlani", "Baurav Singhaniya"];
-const result = humans.every((name)=> {
-    return name.startsWith("B")
-});
-console.log(result);
+// const humans = ["Billu Bhayankar", "Bishal Dadlani", "Baurav Singhaniya"];
+// const result = humans.every((name)=> {
+//     return name.startsWith("B")
+// });
+// console.log(result);
 
 //------Quiz 4 :
 /*
         1. Return an array which have rating 4.2 and above
-        2. Return first book which have rating more than 4
-        3. Return true when all the books rating 4 and above
-        4. Raturn false if one of them rating less then 4
+        2. Return all books rating in a new array.
+        3. Return first book with the rating 4.3.
+        4. Return true when all the books rating 4 and above
+        5. Raturn if books having 2 or more than 2 authors
+        6. 
 */
 const books = [
 {
-    title: "Good Onens",
+    title: "Good Omens",
     authors: ["Terry Pratchett", "Neil Gaiman"],
     rating: 4.25,
 },
@@ -516,6 +519,35 @@ const books = [
 ];
 
 
+// // Solution 1.
+// const retArr = books.filter((book) => {
+//     return book.rating >= 4.2;
+// });
+// console.log(retArr);
+
+// // Solution 2
+// const solTwo = books.map((book) => book.rating);
+// console.log(solTwo);
+
+// // Solution 3.
+// const firstBook = books.find((book) => book.rating >= 4.3);
+// console.log(firstBook);
+
+// // Solution 4.
+// const everyRating = books.every ((book) => book.rating >= 4);
+// console.log(everyRating);
+
+// // Solution 5.
+// const moreAuthors = books.filter((book) => book.authors.length >= 2);
+// console.log(moreAuthors);
+
+// // Another quiz solution.
+// const bookTitle = books
+//     .filter((book) => book.rating >= 4.3)
+//     .map((book) => book.title);
+//     console.log(bookTitle);
+
+  
 
 
 
