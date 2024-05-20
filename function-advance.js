@@ -547,7 +547,39 @@ const books = [
 //     .map((book) => book.title);
 //     console.log(bookTitle);
 
-  
+// -----------Spread Operator----------:
+//              its creates a exaxt same copy of array/object etc
+// 1st Use Case :
+// return array copy of and array
+const spreadArr = [8,9,0,5,4];
+const copySpread = [...spreadArr];
+console.log(copySpread);
+
+// 2nd Use Case :
+// return object copy of object
+const object = {
+    name:"Paan Singh Tomar",
+    address:"Paan Singh C/O Vaishnavi Heights",
+    pin:827013
+}
+const copyObject = {
+    ...object
+}
+console.log(copyObject);
+
+// 3rd Use Case :
+// pass the array elements inside the function call
+
+function sum(a,b,c,d)
+{
+    return a+b+c+d;
+}
+const items = [3,5,6,7];
+const ans = sum(...items);
+console.log(ans);
+
+
+// -----------Rest Operator----------:
 
 
 
