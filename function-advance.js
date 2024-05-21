@@ -551,38 +551,106 @@ const books = [
 //              its creates a exaxt same copy of array/object etc
 // 1st Use Case :
 // return array copy of and array
-const spreadArr = [8,9,0,5,4];
-const copySpread = [...spreadArr];
-console.log(copySpread);
+// const spreadArr = [8,9,0,5,4];
+// const copySpread = [...spreadArr];
+// console.log(copySpread);
 
 // 2nd Use Case :
 // return object copy of object
-const object = {
-    name:"Paan Singh Tomar",
-    address:"Paan Singh C/O Vaishnavi Heights",
-    pin:827013
-}
-const copyObject = {
-    ...object
-}
-console.log(copyObject);
+// const object = {
+//     name:"Paan Singh Tomar",
+//     address:"Paan Singh C/O Vaishnavi Heights",
+//     pin:827013
+// }
+// const copyObject = {
+//     ...object
+// }
+// console.log(copyObject);
 
 // 3rd Use Case :
 // pass the array elements inside the function call
 
-function sum(a,b,c,d)
-{
-    return a+b+c+d;
-}
-const items = [3,5,6,7];
-const ans = sum(...items);
-console.log(ans);
+// function sum(a,b,c,d)
+// {
+//     return a+b+c+d;
+// }
+// const items = [3,5,6,7];
+// const ans = sum(...items);
+// console.log(ans);
 
 
 // -----------Rest Operator----------:
 
+// function multiply(a, ...rest)
+// {
+//     let ind = a;
+//     if(rest.length > 0)
+//         {
+//             for(let num of rest)
+//                 {
+//                     ind *= num;
+//                 }
+//                 console.log(ind);
+//         }    
+// }
+// multiply(10,50);
 
+//----------Default Params-------
 
+// function sum(b, c=5)
+// {
+//     console.log(b * c);
+// }
+// sum(10); // default params is only applied when calling argument is undefined..
+// sum(10, 7);
+
+// // ------- Destructuring------
+
+// const obj = {
+//     id:87,
+//     class :"new",
+//     genaration :"bs4",
+//     model :"delta"
+// };
+// const {class: param = "old"} = obj;
+// // because class key is exist the value should be "new";
+// console.log(param);
+// // param is a variable refer to class pair; 
+
+// ------- Nested Destructruring----
+
+// const nestedObject = {
+//     country:{
+//         state:{
+//             city:"BKSC",
+//         }
+//     }
+// }
+// // const result = nestedObject.country.state.city;
+// const {country:{state:{city}}} = nestedObject;
+// console.log(city);
+
+// -------- Array Destructring ------
+
+// const arrayDes = [67,55,44];
+// const [maths,science,sst] = arrayDes; // its creates variable respactivly
+// console.log(maths);
+
+// const colours = ["pink", "magenta",];
+// const [pink, magenta, cyan = "cyan"] = colours; // can give default value
+// // if variable gets undefined from array;
+// console.log(pink, magenta, cyan);
+
+//------Nested Array Destructuring--------
+
+// const stuff = [
+//     ["mango", "banana"],
+//     ["green", "yellow"]
+// ];
+// const [[langda, chiniya], [hara, pila]] = stuff;
+// console.log(langda, chiniya, hara, pila);
+
+// start from 7 dec :
 
 
 
